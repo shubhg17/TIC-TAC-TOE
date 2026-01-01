@@ -7,8 +7,10 @@ let messageContainer = document.querySelector(".message-container")
 let msg = document.querySelector("#msg")
 
 
+
 //in this game we need 2 players player0 and playerX if at one one player is playing then second cant play alternate they will play in tic tac toe here when turn0 is true then playerX is false and vica versa 
 let turn0 = true;//player0 , playerX
+let count = 0; // to track draw in the game 
 
 
 //store all the winning patterns in a 2d array i.e array of array not in string of string array of array is better
@@ -39,11 +41,22 @@ boxes.forEach((box) => {
       }
       //ki ek bari hi click kr paye har person ek box me isko likhne se double click nhi kr payenge box me bas ek bari toh 0 se X change nhi hoga dubara click hone pe 
       box.disabled = true;
+      count++;
 
       //jese hi button click ho rha ha hum check krenge ki winner kon ha uske liye ek function likhdiya call krke 
-      checkWinner();
+      // checkWinner();
+      let isWinner = checkWinner();
+      if(count === 9 && !isWinner){
+         gameDraw()
+      }
    })
 })
+
+
+const gameDraw = ()=> {
+   msg.innerHTML = "Game was Draw"
+   messageContainer.classList.remove("hide")
+}
 
 //with this function u are basically disabling all the boxes/buttons as when we get a winner we dont need another win and we need to stop the game otherwise multiple winners will come 
 const disabledBoxes = () => {
@@ -114,6 +127,7 @@ const checkWinner = () => {
 //this function is made for restarting game
 const resetButtonn = ()=> {
     turn0 = true;
+    count = 0;
     enableBoxes();
     messageContainer.classList.add("hide")
 }
