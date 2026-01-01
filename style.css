@@ -13,15 +13,19 @@ body {
    display:flex;
    justify-content:center;
    align-items:center;
+   /* //70vh means 70 percent of viewport height mtlb jitna bhi humara page visible hoga uska 70 percent part humesha container ke pass rhega fir jitna marzi content likhde   */
    height:70vh;
 }
 
 .game {
+  /* // 60vmin means hum yaha apni dimension ka 60 percent isko de rhe ha  */
    height:60vmin;
    width:60vmin;
    display:flex;
+   /* //div ke within wrap hojao height width mein  */
    flex-wrap:wrap;
-   gap:1.5vmin;
+   /* //gives space between flexbox elements */
+   gap:1.5vmin; 
    justify-content:center;
    align-items:center;
 }
@@ -30,6 +34,7 @@ body {
    border-radius: 10px;
    border:none;
    background-color:red;
+   /* // as every row we need 3 box and 60vmin for 3 box we need approx 20vmin for each box so 18vmin */
    height:18vmin;
    width:18vmin;
    color:white;
@@ -43,4 +48,26 @@ body {
    background-color:red;
    color:white;
    font-size:20px;
+}
+
+.new-btn {
+   padding:20px;
+   border-radius:20px;
+   border:none;
+   background-color:red;
+   color:white;
+   font-size:20px;
+}
+
+#msg {
+   font-size:5vmin;
+   color:red;
+}
+
+.message-container {
+   height:30vmin;
+}
+
+.hide {
+   display:none;
 }

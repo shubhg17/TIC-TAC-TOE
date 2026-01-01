@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- //This is created to print Winner message with para on screen and when we get a winner we start new game with new button  -->
+     <!-- //here hide is another class as at the start of game we dont have a winner so we will hide that at starting so hide is here an another class   so jabh hum message container ko dikhana chahte ha tabh dikhayenge aur nhi toh hide krdenge -->
+    <div class="message-container hide">
+      <p id="msg">Winner</p>
+      <button class="new-btn">New Game</button>
+    </div>
+
      <h1>Tic Tac Toe</h1>
      <div class="container">
       <div class="game">
@@ -19,6 +26,7 @@
       <button class="box"></button>
     </div>
      </div>
+     <!-- //For reseting game created a button -->
      <button id="resetbutton">Reset Game</button>
   </body>
   <script src="script.js"></script>
