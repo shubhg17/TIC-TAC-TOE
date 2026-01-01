@@ -65,7 +65,7 @@ const showWinner = (winner) => {
    msg.innerHTML = `Congratulations , Winner is ${winner}`
    //messagecontainer ki class list se hum remove krdenge apni class hide 
    //iss se message container visible ho jayega 
-   messageContainer.classList.remove("hide") // nhi samajh aya yeh step
+   messageContainer.classList.remove("hide") // as hume yaha voh container show krna ha as hume winner mil gya ha isliye remove krna padega hide wali class ko joh humne di ha div me messageContainer ke sath main
    disabledBoxes();
 }
 
